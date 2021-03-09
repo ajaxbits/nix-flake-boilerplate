@@ -15,7 +15,7 @@
       devShell."${system}" = pkgs.mkShell {
         buildInputs = [env];
         shellHook = ''
-          mkdir .vim
+          mkdir -p .vim
           echo '{"python.pythonPath": "${env}/bin/python",}' > .vim/coc-settings.json
         '';
       };
